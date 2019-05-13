@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,nofollow">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React performance SPA</title>
+    <meta name="description" content="Description of your app here">
+    <meta name="keywords" content="Keywords of your app here" />
+    <meta property="og:url" content="https://localhost:5000" />
+    <meta property="og:title" content="React performance SPA" />
+    <meta property="og:description" content="Description of your app here" />
+    <style>
+        body {
+            background-color: #f2f4f6;
+            margin: 0;
+        }
+
+        .spinner {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .spinner:before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            margin-top: -20px;
+            margin-left: -20px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            border-top-color: #53b374;
+            animation: spinner .6s linear infinite;
+        }
+
+        @keyframes spinner {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+  <div id="app">
+    <div class="spinner"></div>
+  </div>
+</body>
+</html>
