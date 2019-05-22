@@ -14,7 +14,7 @@ const config = {
     polyfills: []
   },
   old: {
-    browsers: ['last 2 versions'],
+    browsers: ['> 1%'],
     polyfills: ['whatwg-fetch']
   }
 };
