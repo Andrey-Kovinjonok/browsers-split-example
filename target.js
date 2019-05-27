@@ -1,3 +1,5 @@
+/* global process, module */
+
 const config = {
   modern: {
     browsers: [

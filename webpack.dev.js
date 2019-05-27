@@ -103,7 +103,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve('src', 'index.html'),
+      template: path.resolve('src', 'index.html')
     }),
     new webpack.HotModuleReplacementPlugin()
   ]

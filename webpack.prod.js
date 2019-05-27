@@ -19,13 +19,15 @@ const htmlMinify = {
   minifyURLs: true
 };
 
+const { TARGET } = process.env;
+
 module.exports = {
   mode: 'production',
   entry: {
-    app: ['@babel/polyfill', ...polyfills, path.resolve('src', 'index.jsx')]
+    app: [...polyfills, path.resolve('src', 'index.jsx')]
   },
   output: {
-    filename: process.env.TARGET + '_js/[name].[chunkhash].js',
+    filename: TARGET + '_js/[name].[chunkhash].js',
     path: path.resolve('dist'),
     publicPath: '/'
   },
@@ -104,11 +106,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: process.env.TARGET + '_index.html',
+      filename: TARGET + '_index.html',
       template: path.resolve('src', 'index.html'),
       minify: { ...htmlMinify }
     }),
-    new MiniCss({ filename: process.env.TARGET + '_css/[name].[contenthash].css' }),
+    new MiniCss({ filename: TARGET + '_css/[name].[contenthash].css' }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/,
       cssProcessorOptions: {
