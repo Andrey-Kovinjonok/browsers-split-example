@@ -15,5 +15,12 @@ module.exports = {
   plugins: [
     '@babel/plugin-syntax-dynamic-import',
     ['@babel/plugin-proposal-class-properties', { loose: true }]
-  ]
+  ],
+  env: {
+    production: {
+      plugins: [
+        ['transform-react-remove-prop-types', { removeImport: true }]
+      ]
+    }
+  }
 };
